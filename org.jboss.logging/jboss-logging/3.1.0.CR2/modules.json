@@ -1,0 +1,84 @@
+{
+  "organization":"org.jboss.logging",
+  "name":"jboss-logging",
+  "version":"3.1.0.CR2",
+  "modules":[{
+    "unique-id":"org.jboss.logging:jboss-logging:3.1.0.CR2-9a5f59d",
+    "artifacts":[{
+      "hash":"28725380c07f917ace4e511db21cc45e9ae5a72b",
+      "artifact-type":"jar",
+      "configurations":["master"],
+      "locations":["http://repo1.maven.org/maven2/org/jboss/logging/jboss-logging/3.1.0.CR2/jboss-logging-3.1.0.CR2.jar"]
+    }],
+    "dependencies":[{
+      "organization":"org.jboss.logmanager",
+      "name":"jboss-logmanager",
+      "version":"1.2.0.GA",
+      "configuration":"provided->compile(*),provided(*),runtime(*),master(*)",
+      "force":true
+    },{
+      "organization":"log4j",
+      "name":"log4j",
+      "version":"1.2.16",
+      "configuration":"provided->compile(*),provided(*),runtime(*),master(*)",
+      "force":true,
+      "exclusion-rules":[{
+        "organization":"com.sun.jdmk",
+        "name":"jmxtools"
+      },{
+        "organization":"com.sun.jmx",
+        "name":"jmxri"
+      }]
+    },{
+      "organization":"org.slf4j",
+      "name":"slf4j-api",
+      "version":"1.6.1",
+      "configuration":"provided->compile(*),provided(*),runtime(*),master(*)",
+      "force":true
+    }],
+    "configurations":[{
+      "name":"system",
+      "description":"this scope is similar to provided except that you have to provide the JAR which contains it explicitly. The artifact is always available and is not looked up in a repository.",
+      "visibility":"public"
+    },{
+      "name":"master",
+      "description":"contains only the artifact published by this module itself, with no transitive dependencies",
+      "visibility":"public"
+    },{
+      "name":"compile",
+      "description":"this is the default scope, used if none is specified. Compile dependencies are available in all classpaths.",
+      "visibility":"public"
+    },{
+      "name":"provided",
+      "description":"this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive.",
+      "visibility":"public"
+    },{
+      "name":"runtime",
+      "description":"this scope indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath.",
+      "visibility":"public",
+      "extends":["compile"]
+    },{
+      "name":"test",
+      "description":"this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases.",
+      "visibility":"private",
+      "extends":["runtime"]
+    },{
+      "name":"default",
+      "description":"runtime dependencies and master artifact can be used with this conf",
+      "visibility":"public",
+      "extends":["runtime","master"]
+    },{
+      "name":"optional",
+      "description":"contains all optional dependencies",
+      "visibility":"public"
+    },{
+      "name":"javadoc",
+      "description":"this configuration contains the javadoc artifact of this module, if any.",
+      "visibility":"public"
+    },{
+      "name":"sources",
+      "description":"this configuration contains the source artifact of this module, if any.",
+      "visibility":"public"
+    }]
+  }]
+}

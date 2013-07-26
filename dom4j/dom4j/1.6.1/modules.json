@@ -1,0 +1,131 @@
+{
+  "organization":"dom4j",
+  "name":"dom4j",
+  "version":"1.6.1",
+  "modules":[{
+    "unique-id":"dom4j:dom4j:1.6.1-e05bc10",
+    "artifacts":[{
+      "hash":"5d3ccc056b6f056dbf0dddfdf43894b9065a8f94",
+      "artifact-type":"jar",
+      "configurations":["master"],
+      "locations":["http://repo1.maven.org/maven2/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar"]
+    }],
+    "dependencies":[{
+      "organization":"jaxme",
+      "name":"jaxme-api",
+      "version":"0.3",
+      "configuration":"optional->compile(*),master(*)",
+      "force":true
+    },{
+      "organization":"msv",
+      "name":"relaxngDatatype",
+      "version":"20030807",
+      "configuration":"optional->compile(*),master(*)",
+      "force":true
+    },{
+      "organization":"xpp3",
+      "name":"xpp3",
+      "version":"1.1.3.3",
+      "configuration":"optional->compile(*),master(*)",
+      "force":true
+    },{
+      "organization":"junitperf",
+      "name":"junitperf",
+      "version":"1.8",
+      "configuration":"test->runtime(*),master(*)",
+      "force":true
+    },{
+      "organization":"xerces",
+      "name":"xercesImpl",
+      "version":"2.6.2",
+      "configuration":"test->runtime(*),master(*)",
+      "force":true
+    },{
+      "organization":"pull-parser",
+      "name":"pull-parser",
+      "version":"2",
+      "configuration":"optional->compile(*),master(*)",
+      "force":true
+    },{
+      "organization":"stax",
+      "name":"stax-api",
+      "version":"1.0",
+      "configuration":"optional->compile(*),master(*)",
+      "force":true
+    },{
+      "organization":"xml-apis",
+      "name":"xml-apis",
+      "version":"1.0.b2",
+      "configuration":"compile->compile(*),master(*);runtime->runtime(*)",
+      "force":true
+    },{
+      "organization":"msv",
+      "name":"xsdlib",
+      "version":"20030807",
+      "configuration":"optional->compile(*),master(*)",
+      "force":true
+    },{
+      "organization":"xalan",
+      "name":"xalan",
+      "version":"2.5.1",
+      "configuration":"test->runtime(*),master(*)",
+      "force":true
+    },{
+      "organization":"stax",
+      "name":"stax-ri",
+      "version":"1.0",
+      "configuration":"test->runtime(*),master(*)",
+      "force":true
+    },{
+      "organization":"jaxen",
+      "name":"jaxen",
+      "version":"1.1-beta-6",
+      "configuration":"optional->compile(*),master(*)",
+      "force":true
+    }],
+    "configurations":[{
+      "name":"system",
+      "description":"this scope is similar to provided except that you have to provide the JAR which contains it explicitly. The artifact is always available and is not looked up in a repository.",
+      "visibility":"public"
+    },{
+      "name":"master",
+      "description":"contains only the artifact published by this module itself, with no transitive dependencies",
+      "visibility":"public"
+    },{
+      "name":"compile",
+      "description":"this is the default scope, used if none is specified. Compile dependencies are available in all classpaths.",
+      "visibility":"public"
+    },{
+      "name":"provided",
+      "description":"this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive.",
+      "visibility":"public"
+    },{
+      "name":"runtime",
+      "description":"this scope indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath.",
+      "visibility":"public",
+      "extends":["compile"]
+    },{
+      "name":"test",
+      "description":"this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases.",
+      "visibility":"private",
+      "extends":["runtime"]
+    },{
+      "name":"default",
+      "description":"runtime dependencies and master artifact can be used with this conf",
+      "visibility":"public",
+      "extends":["runtime","master"]
+    },{
+      "name":"optional",
+      "description":"contains all optional dependencies",
+      "visibility":"public"
+    },{
+      "name":"javadoc",
+      "description":"this configuration contains the javadoc artifact of this module, if any.",
+      "visibility":"public"
+    },{
+      "name":"sources",
+      "description":"this configuration contains the source artifact of this module, if any.",
+      "visibility":"public"
+    }]
+  }]
+}

@@ -1,0 +1,126 @@
+{
+  "organization":"org.seleniumhq.selenium",
+  "name":"selenium-chrome-driver",
+  "version":"2.25.0",
+  "modules":[{
+    "unique-id":"org.seleniumhq.selenium:selenium-chrome-driver:2.25.0-ccec413",
+    "artifacts":[{
+      "hash":"93d6a6d76a1be4b91e5937b0ea9a8b0a6431138f",
+      "artifact-type":"jar",
+      "configurations":["master"],
+      "locations":["http://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-chrome-driver/2.25.0/selenium-chrome-driver-2.25.0.jar"]
+    }],
+    "dependencies":[{
+      "organization":"org.seleniumhq.selenium",
+      "name":"selenium-remote-driver",
+      "version":"2.25.0",
+      "configuration":"compile->compile(*),master(*);runtime->runtime(*)",
+      "force":true
+    }],
+    "overrides":[{
+      "organization":"junit",
+      "name":"junit",
+      "override-version":"4.10"
+    },{
+      "organization":"org.hamcrest",
+      "name":"hamcrest-all",
+      "override-version":"1.1"
+    },{
+      "organization":"org.apache.commons",
+      "name":"commons-exec",
+      "override-version":"1.1"
+    },{
+      "organization":"commons-io",
+      "name":"commons-io",
+      "override-version":"2.0.1"
+    },{
+      "organization":"org.apache.httpcomponents",
+      "name":"httpclient",
+      "override-version":"4.1.2"
+    },{
+      "organization":"net.java.dev.jna",
+      "name":"jna",
+      "override-version":"3.4.0"
+    },{
+      "organization":"org.webbitserver",
+      "name":"webbit",
+      "override-version":"0.4.6"
+    },{
+      "organization":"com.google.guava",
+      "name":"guava",
+      "override-version":"12.0"
+    },{
+      "organization":"net.java.dev.jna",
+      "name":"platform",
+      "override-version":"3.4.0"
+    },{
+      "organization":"org.testng",
+      "name":"testng",
+      "override-version":"6.0.1"
+    },{
+      "organization":"commons-codec",
+      "name":"commons-codec",
+      "override-version":"1.6"
+    },{
+      "organization":"org.apache.httpcomponents",
+      "name":"httpcore",
+      "override-version":"4.1.3"
+    },{
+      "organization":"org.json",
+      "name":"json",
+      "override-version":"20080701"
+    },{
+      "organization":"net.jcip",
+      "name":"jcip-annotations",
+      "override-version":"1.0"
+    },{
+      "organization":"cglib",
+      "name":"cglib-nodep",
+      "override-version":"2.1_3"
+    }],
+    "configurations":[{
+      "name":"system",
+      "description":"this scope is similar to provided except that you have to provide the JAR which contains it explicitly. The artifact is always available and is not looked up in a repository.",
+      "visibility":"public"
+    },{
+      "name":"master",
+      "description":"contains only the artifact published by this module itself, with no transitive dependencies",
+      "visibility":"public"
+    },{
+      "name":"compile",
+      "description":"this is the default scope, used if none is specified. Compile dependencies are available in all classpaths.",
+      "visibility":"public"
+    },{
+      "name":"provided",
+      "description":"this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive.",
+      "visibility":"public"
+    },{
+      "name":"runtime",
+      "description":"this scope indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath.",
+      "visibility":"public",
+      "extends":["compile"]
+    },{
+      "name":"test",
+      "description":"this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases.",
+      "visibility":"private",
+      "extends":["runtime"]
+    },{
+      "name":"default",
+      "description":"runtime dependencies and master artifact can be used with this conf",
+      "visibility":"public",
+      "extends":["runtime","master"]
+    },{
+      "name":"optional",
+      "description":"contains all optional dependencies",
+      "visibility":"public"
+    },{
+      "name":"javadoc",
+      "description":"this configuration contains the javadoc artifact of this module, if any.",
+      "visibility":"public"
+    },{
+      "name":"sources",
+      "description":"this configuration contains the source artifact of this module, if any.",
+      "visibility":"public"
+    }]
+  }]
+}
