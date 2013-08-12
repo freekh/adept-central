@@ -8,7 +8,7 @@
       "hash":"0c589509ec6fd86d5d2fda37e07c08538235d3b9",
       "artifact-type":"jar",
       "configurations":["master"],
-      "locations":["http://repo.typesafe.com/typesafe/releases/com/google/protobuf/protobuf-java/2.4.1/protobuf-java-2.4.1.jar"]
+      "locations":["http://repo1.maven.org/maven2/com/google/protobuf/protobuf-java/2.4.1/protobuf-java-2.4.1.jar"]
     }],
     "dependencies":[{
       "organization":"junit",

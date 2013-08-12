@@ -8,7 +8,7 @@
       "hash":"c94f54227b08100974c36170dcb53329435fe5ad",
       "artifact-type":"jar",
       "configurations":["master"],
-      "locations":["http://repo1.maven.org/maven2/junit/junit/4.8.2/junit-4.8.2.jar"]
+      "locations":["http://oss.sonatype.org/content/repositories/releases/junit/junit/4.8.2/junit-4.8.2.jar"]
     }],
     "configurations":[{
       "name":"system",

@@ -8,7 +8,7 @@
       "hash":"860340562250678d1a344907ac75754e259cdb14",
       "artifact-type":"jar",
       "configurations":["master"],
-      "locations":["http://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar"]
+      "locations":["http://oss.sonatype.org/content/repositories/releases/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar"]
     }],
     "dependencies":[{
       "organization":"jmock",
@@ -34,13 +34,13 @@
       "name":"easymock",
       "override-version":"2.2"
     },{
-      "organization":"jmock",
-      "name":"jmock",
-      "override-version":"1.1.0"
-    },{
       "organization":"junit",
       "name":"junit",
       "override-version":"4.0"
+    },{
+      "organization":"jmock",
+      "name":"jmock",
+      "override-version":"1.1.0"
     }],
     "configurations":[{
       "name":"system",

@@ -3,8 +3,18 @@
   "name":"slf4j-api",
   "version":"1.7.2",
   "modules":[{
-    "unique-id":"org.slf4j:slf4j-api:1.7.2-8ed2f5a",
+    "unique-id":"org.slf4j:slf4j-api:1.7.2-abb2b11",
     "artifacts":[{
+      "hash":"51d9af60bed42176be7a2e495d8e938cbd4060a3",
+      "artifact-type":"javadoc",
+      "configurations":["javadoc"],
+      "locations":["http://oss.sonatype.org/content/repositories/releases/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2-javadoc.jar"]
+    },{
+      "hash":"58d38f68d4a867d4552ae27960bb348d7eaa1297",
+      "artifact-type":"source",
+      "configurations":["sources"],
+      "locations":["http://oss.sonatype.org/content/repositories/releases/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2-sources.jar"]
+    },{
       "hash":"0081d61b7f33ebeab314e07de0cc596f8e858d97",
       "artifact-type":"jar",
       "configurations":["master"],
@@ -19,20 +29,20 @@
     }],
     "overrides":[{
       "organization":"org.slf4j",
-      "name":"slf4j-jdk14",
+      "name":"slf4j-api",
       "override-version":"1.7.2"
     },{
       "organization":"ch.qos.cal10n",
       "name":"cal10n-api",
       "override-version":"0.7.4"
     },{
+      "organization":"org.slf4j",
+      "name":"slf4j-jdk14",
+      "override-version":"1.7.2"
+    },{
       "organization":"log4j",
       "name":"log4j",
       "override-version":"1.2.17"
-    },{
-      "organization":"org.slf4j",
-      "name":"slf4j-api",
-      "override-version":"1.7.2"
     }],
     "configurations":[{
       "name":"system",

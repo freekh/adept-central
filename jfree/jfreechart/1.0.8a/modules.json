@@ -1,0 +1,77 @@
+{
+  "organization":"jfree",
+  "name":"jfreechart",
+  "version":"1.0.8a",
+  "modules":[{
+    "unique-id":"jfree:jfreechart:1.0.8a-289efe7",
+    "artifacts":[{
+      "hash":"83c3b0d8fcd961bd3c9a702f59fe771351e47420",
+      "artifact-type":"jar",
+      "configurations":["master"],
+      "locations":["http://repo.typesafe.com/typesafe/releases/jfree/jfreechart/1.0.8a/jfreechart-1.0.8a.jar"]
+    }],
+    "dependencies":[{
+      "organization":"javax.servlet",
+      "name":"servlet-api",
+      "version":"2.3",
+      "configuration":"optional->compile(*),master(*)",
+      "force":true
+    },{
+      "organization":"jfree",
+      "name":"jcommon",
+      "version":"1.0.12",
+      "configuration":"compile->compile(*),master(*);runtime->runtime(*)",
+      "force":true
+    },{
+      "organization":"junit",
+      "name":"junit",
+      "version":"3.8.2",
+      "configuration":"test->runtime(*),master(*)",
+      "force":true
+    }],
+    "configurations":[{
+      "name":"system",
+      "description":"this scope is similar to provided except that you have to provide the JAR which contains it explicitly. The artifact is always available and is not looked up in a repository.",
+      "visibility":"public"
+    },{
+      "name":"master",
+      "description":"contains only the artifact published by this module itself, with no transitive dependencies",
+      "visibility":"public"
+    },{
+      "name":"compile",
+      "description":"this is the default scope, used if none is specified. Compile dependencies are available in all classpaths.",
+      "visibility":"public"
+    },{
+      "name":"provided",
+      "description":"this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive.",
+      "visibility":"public"
+    },{
+      "name":"runtime",
+      "description":"this scope indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath.",
+      "visibility":"public",
+      "extends":["compile"]
+    },{
+      "name":"test",
+      "description":"this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases.",
+      "visibility":"private",
+      "extends":["runtime"]
+    },{
+      "name":"default",
+      "description":"runtime dependencies and master artifact can be used with this conf",
+      "visibility":"public",
+      "extends":["runtime","master"]
+    },{
+      "name":"optional",
+      "description":"contains all optional dependencies",
+      "visibility":"public"
+    },{
+      "name":"javadoc",
+      "description":"this configuration contains the javadoc artifact of this module, if any.",
+      "visibility":"public"
+    },{
+      "name":"sources",
+      "description":"this configuration contains the source artifact of this module, if any.",
+      "visibility":"public"
+    }]
+  }]
+}

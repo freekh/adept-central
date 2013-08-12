@@ -3,8 +3,18 @@
   "name":"commons-logging",
   "version":"1.1.1",
   "modules":[{
-    "unique-id":"commons-logging:commons-logging:1.1.1-e71da1f",
+    "unique-id":"commons-logging:commons-logging:1.1.1-d0118e9",
     "artifacts":[{
+      "hash":"f3f156cbff0e0fb0d64bfce31a352cce4a33bc19",
+      "artifact-type":"source",
+      "configurations":["sources"],
+      "locations":["http://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-sources.jar"]
+    },{
+      "hash":"23a8a81d489a6aec1cfda5740cad27853263578c",
+      "artifact-type":"javadoc",
+      "configurations":["javadoc"],
+      "locations":["http://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-javadoc.jar"]
+    },{
       "hash":"5043bfebc3db072ed80fbd362e7caf00e885d8ae",
       "artifact-type":"jar",
       "configurations":["master"],

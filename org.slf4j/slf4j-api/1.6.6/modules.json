@@ -3,12 +3,22 @@
   "name":"slf4j-api",
   "version":"1.6.6",
   "modules":[{
-    "unique-id":"org.slf4j:slf4j-api:1.6.6-e7d0370",
+    "unique-id":"org.slf4j:slf4j-api:1.6.6-bb2fd5c",
     "artifacts":[{
+      "hash":"bcd0e21b1572960cefd449f8a16efab5b6b8e644",
+      "artifact-type":"source",
+      "configurations":["sources"],
+      "locations":["http://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.6.6/slf4j-api-1.6.6-sources.jar"]
+    },{
       "hash":"ce53b0a0e2cfbb27e8a59d38f79a18a5c6a8d2b0",
       "artifact-type":"jar",
       "configurations":["master"],
       "locations":["http://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.6.6/slf4j-api-1.6.6.jar"]
+    },{
+      "hash":"4253b52aabf1c5a5f20c191a261e6ada0fcf621d",
+      "artifact-type":"javadoc",
+      "configurations":["javadoc"],
+      "locations":["http://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.6.6/slf4j-api-1.6.6-javadoc.jar"]
     }],
     "dependencies":[{
       "organization":"junit",

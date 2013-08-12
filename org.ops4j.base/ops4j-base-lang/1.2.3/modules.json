@@ -1,0 +1,65 @@
+{
+  "organization":"org.ops4j.base",
+  "name":"ops4j-base-lang",
+  "version":"1.2.3",
+  "modules":[{
+    "unique-id":"org.ops4j.base:ops4j-base-lang:1.2.3-9e2bffb",
+    "artifacts":[{
+      "hash":"c422da7f0cea4d5664c4d8b1261679a01e771a97",
+      "artifact-type":"bundle",
+      "configurations":["master"],
+      "locations":["http://repo1.maven.org/maven2/org/ops4j/base/ops4j-base-lang/1.2.3/ops4j-base-lang-1.2.3.jar"]
+    }],
+    "dependencies":[{
+      "organization":"junit",
+      "name":"junit",
+      "version":"4.4",
+      "configuration":"test->runtime(*),master(*)",
+      "force":true
+    }],
+    "configurations":[{
+      "name":"system",
+      "description":"this scope is similar to provided except that you have to provide the JAR which contains it explicitly. The artifact is always available and is not looked up in a repository.",
+      "visibility":"public"
+    },{
+      "name":"master",
+      "description":"contains only the artifact published by this module itself, with no transitive dependencies",
+      "visibility":"public"
+    },{
+      "name":"compile",
+      "description":"this is the default scope, used if none is specified. Compile dependencies are available in all classpaths.",
+      "visibility":"public"
+    },{
+      "name":"provided",
+      "description":"this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive.",
+      "visibility":"public"
+    },{
+      "name":"runtime",
+      "description":"this scope indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath.",
+      "visibility":"public",
+      "extends":["compile"]
+    },{
+      "name":"test",
+      "description":"this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases.",
+      "visibility":"private",
+      "extends":["runtime"]
+    },{
+      "name":"default",
+      "description":"runtime dependencies and master artifact can be used with this conf",
+      "visibility":"public",
+      "extends":["runtime","master"]
+    },{
+      "name":"optional",
+      "description":"contains all optional dependencies",
+      "visibility":"public"
+    },{
+      "name":"javadoc",
+      "description":"this configuration contains the javadoc artifact of this module, if any.",
+      "visibility":"public"
+    },{
+      "name":"sources",
+      "description":"this configuration contains the source artifact of this module, if any.",
+      "visibility":"public"
+    }]
+  }]
+}

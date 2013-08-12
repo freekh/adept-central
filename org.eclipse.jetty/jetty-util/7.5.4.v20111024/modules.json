@@ -1,0 +1,117 @@
+{
+  "organization":"org.eclipse.jetty",
+  "name":"jetty-util",
+  "version":"7.5.4.v20111024",
+  "modules":[{
+    "unique-id":"org.eclipse.jetty:jetty-util:7.5.4.v20111024-35ceb91",
+    "artifacts":[{
+      "hash":"29232c05f9c764b4b025f0a18f7144f60c7deedb",
+      "artifact-type":"jar",
+      "configurations":["master"],
+      "locations":["http://repo1.maven.org/maven2/org/eclipse/jetty/jetty-util/7.5.4.v20111024/jetty-util-7.5.4.v20111024.jar"]
+    }],
+    "dependencies":[{
+      "organization":"org.slf4j",
+      "name":"slf4j-api",
+      "version":"1.6.1",
+      "configuration":"optional->compile(*),provided(*),runtime(*),master(*)",
+      "force":true
+    },{
+      "organization":"org.eclipse.jetty.toolchain",
+      "name":"jetty-test-helper",
+      "version":"1.6",
+      "configuration":"test->runtime(*),master(*)",
+      "force":true
+    }],
+    "overrides":[{
+      "organization":"org.slf4j",
+      "name":"jcl104-over-slf4j",
+      "override-version":"1.6.1"
+    },{
+      "organization":"junit",
+      "name":"junit",
+      "override-version":"4.8.1"
+    },{
+      "organization":"javax.servlet",
+      "name":"servlet-api",
+      "override-version":"2.5",
+      "unique-id":"javax.servlet:servlet-api:2.5-dc7768c"
+    },{
+      "organization":"org.apache.maven",
+      "name":"maven-plugin-tools-api",
+      "override-version":"2.0"
+    },{
+      "organization":"org.slf4j",
+      "name":"log4j-over-slf4j",
+      "override-version":"1.6.1"
+    },{
+      "organization":"javax.mail",
+      "name":"mail",
+      "override-version":"1.4.1"
+    },{
+      "organization":"javax.activation",
+      "name":"activation",
+      "override-version":"1.1"
+    },{
+      "organization":"org.mockito",
+      "name":"mockito-core",
+      "override-version":"1.8.5"
+    },{
+      "organization":"org.apache.geronimo.specs",
+      "name":"geronimo-jta_1.1_spec",
+      "override-version":"1.1.1"
+    },{
+      "organization":"org.slf4j",
+      "name":"slf4j-api",
+      "override-version":"1.6.1"
+    },{
+      "organization":"org.eclipse.jetty.toolchain",
+      "name":"jetty-test-helper",
+      "override-version":"1.6"
+    }],
+    "configurations":[{
+      "name":"system",
+      "description":"this scope is similar to provided except that you have to provide the JAR which contains it explicitly. The artifact is always available and is not looked up in a repository.",
+      "visibility":"public"
+    },{
+      "name":"master",
+      "description":"contains only the artifact published by this module itself, with no transitive dependencies",
+      "visibility":"public"
+    },{
+      "name":"compile",
+      "description":"this is the default scope, used if none is specified. Compile dependencies are available in all classpaths.",
+      "visibility":"public"
+    },{
+      "name":"provided",
+      "description":"this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive.",
+      "visibility":"public"
+    },{
+      "name":"runtime",
+      "description":"this scope indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath.",
+      "visibility":"public",
+      "extends":["compile"]
+    },{
+      "name":"test",
+      "description":"this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases.",
+      "visibility":"private",
+      "extends":["runtime"]
+    },{
+      "name":"default",
+      "description":"runtime dependencies and master artifact can be used with this conf",
+      "visibility":"public",
+      "extends":["runtime","master"]
+    },{
+      "name":"optional",
+      "description":"contains all optional dependencies",
+      "visibility":"public"
+    },{
+      "name":"javadoc",
+      "description":"this configuration contains the javadoc artifact of this module, if any.",
+      "visibility":"public"
+    },{
+      "name":"sources",
+      "description":"this configuration contains the source artifact of this module, if any.",
+      "visibility":"public"
+    }]
+  }]
+}
